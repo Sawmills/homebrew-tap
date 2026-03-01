@@ -1,0 +1,40 @@
+name: Formula CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  formula-ci:
+    name: formula-ci
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate formulae
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s nullglob
+          formulae=(Formula/*.rb)
+
+          if [ ${#formulae[@]} -eq 0 ]; then
+            echo "No formulae found; nothing to validate"
+            exit 0
+          fi
+
+          brew update-reset
+          brew tap Sawmills/public-tap "file://${PWD}"
+
+          for formula in "${formulae[@]}"; do
+            name="$(basename "${formula}" .rb)"
+            echo "::group::Audit ${name}"
+            brew audit --strict "Sawmills/public-tap/${name}"
+            echo "::endgroup::"
+
+            # Release assets may be private; keep CI focused on formula validation.
+            # Install/smoke/test are executed in the release pipeline where scoped
+            # credentials are available.
+          done
