@@ -1,8 +1,8 @@
 class Sm < Formula
   desc "Sawmills.ai CLI - telemetry cost optimization"
   homepage "https://github.com/Sawmills/sawmills-cli"
-  license "MIT"
   version "0.2.1"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
