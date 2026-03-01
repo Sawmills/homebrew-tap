@@ -31,7 +31,7 @@ jobs:
           for formula in "${formulae[@]}"; do
             name="$(basename "${formula}" .rb)"
             echo "::group::Audit ${name}"
-            brew audit --strict "${formula}"
+            brew audit --strict "Sawmills/public-tap/${name}"
             echo "::endgroup::"
 
             echo "::group::Install ${name}"
