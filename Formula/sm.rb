@@ -3,6 +3,8 @@ class Sm < Formula
   homepage "https://github.com/Sawmills/sawmills-cli"
   version "0.2.3"
   license "MIT"
+  # Legacy naming: this bucket is the canonical public endpoint for
+  # externally downloadable sm artifacts.
 
   on_macos do
     if Hardware::CPU.arm?
