@@ -26,6 +26,10 @@ jobs:
           brew install sawmills/public-tap/sm
           sm --version
 
+          brew uninstall --force sawmills-csvcheck >/dev/null 2>&1 || true
+          brew install sawmills/public-tap/sawmills-csvcheck
+          sawmills-csvcheck -version
+
   alert-on-failure:
     name: alert-on-failure
     needs: smoke
