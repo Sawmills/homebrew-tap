@@ -31,7 +31,10 @@ class SawmillsCsvcheck < Formula
       checkout,commerce
     CSV
 
-    assert_match "VALID: CSV matches csvenrichmentprocessor parsing rules", shell_output("#{bin}/sawmills-csvcheck -file #{testpath}/valid.csv -lookup-key service_name")
+    output = shell_output(
+      "#{bin}/sawmills-csvcheck -file #{testpath}/valid.csv -lookup-key service_name",
+    )
+    assert_match "VALID: CSV matches csvenrichmentprocessor parsing rules", output
     assert_match version.to_s, shell_output("#{bin}/sawmills-csvcheck -version")
   end
 end
