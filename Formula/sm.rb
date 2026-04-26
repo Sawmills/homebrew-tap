@@ -1,7 +1,7 @@
 class Sm < Formula
   desc "Sawmills.ai CLI - telemetry cost optimization"
   homepage "https://github.com/Sawmills/sawmills-cli"
-  version "0.9.1"
+  version "0.10.0"
   # Homebrew formula distributes Sawmills binaries under proprietary terms.
   # Source repository metadata in Cargo.toml remains MIT.
   license :cannot_represent
@@ -10,18 +10,18 @@ class Sm < Formula
   # externally downloadable sm artifacts.
   on_macos do
     if Hardware::CPU.arm?
-      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.9.1/sm_v0.9.1_Darwin_arm64.tar.gz"
-      sha256 "894e07abd49d4944e586f0cb89e5892cd1a62a57cdff4354d2eb3bdb222ca09d"
+      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.10.0/sm_v0.10.0_Darwin_arm64.tar.gz"
+      sha256 "f581fe1471062d8ac19269aee7f3efae7eca4c50cb90ed5cf309199b12fe0ea0"
     else
-      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.9.1/sm_v0.9.1_Darwin_x86_64.tar.gz"
-      sha256 "090731ad4a428c370a577505f082f8aaf94be5c48b73931b1932638a66e07df3"
+      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.10.0/sm_v0.10.0_Darwin_x86_64.tar.gz"
+      sha256 "1481c39db8735a8551e82c5e8e968935537cb2dae83eee4e978c8198fd7087f8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.9.1/sm_v0.9.1_Linux_x86_64.tar.gz"
-      sha256 "ef7774a6c0396159feb50378d3218e69662152bd2f89188926e94a67bf332986"
+      url "https://sawmills-plat-ue1-staging-public-artifacts.s3.us-east-1.amazonaws.com/releases/v0.10.0/sm_v0.10.0_Linux_x86_64.tar.gz"
+      sha256 "50d1577f2a625d7c2e1fc49b93a23834dadc699a7beb320424571c3dd4b9e794"
     end
   end
 
