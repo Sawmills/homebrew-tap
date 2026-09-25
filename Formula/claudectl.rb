@@ -1,7 +1,6 @@
 class Claudectl < Formula
   desc "Manage multiple Claude Code accounts"
   homepage "https://github.com/Sawmills/claudectl"
-  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
