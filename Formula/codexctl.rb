@@ -5,22 +5,22 @@ class Codexctl < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.45/codexctl_v0.1.45_Darwin_arm64.tar.gz"
-      sha256 "f13cb87b7e41d6b2471d2558b0e82380ccabffd8e502f6c10e0376c4dcc08a4e"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.46/codexctl_v0.1.46_Darwin_arm64.tar.gz"
+      sha256 "40336b4774db8a4c07a796b7951db01a9be6b8298b0e7cd802392b44a1e91e00"
     else
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.45/codexctl_v0.1.45_Darwin_x86_64.tar.gz"
-      sha256 "60b503921e507f0305624a17813c40104d670427109165ab040ec6a9fd56d624"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.46/codexctl_v0.1.46_Darwin_x86_64.tar.gz"
+      sha256 "3d55c6140a3adfa0edfefddba79a7a7cd905c0731e973946c7ffbb9e13a3e145"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.45/codexctl_v0.1.45_Linux_arm64.tar.gz"
-      sha256 "1084c9f64a1945deb8e1c897b75993d85969244d49ca825af6f43324abb62c36"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.46/codexctl_v0.1.46_Linux_arm64.tar.gz"
+      sha256 "d790b9520c662747225dd0ea66adff031905b8740d6617faa173d1d5ddbe1bf1"
     end
     on_intel do
-      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.45/codexctl_v0.1.45_Linux_x86_64.tar.gz"
-      sha256 "06b6f8caf1862dfaffe67eada4fbf6215057ed9736025119062dd88d1e8a5f45"
+      url "https://github.com/Sawmills/codexctl/releases/download/v0.1.46/codexctl_v0.1.46_Linux_x86_64.tar.gz"
+      sha256 "9e12b55a6d04ee9d486789bf82162ad5271d308f096b609dea876bb0f4a1351f"
     end
   end
 
