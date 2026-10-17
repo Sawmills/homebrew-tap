@@ -5,18 +5,18 @@ class Claudectl < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.27/claudectl_v0.1.27_Darwin_arm64.tar.gz"
-      sha256 "bcb9e23229ffd03a204292715a4243e28d7a386328990db9f2d2ed6c185e3c90"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.28/claudectl_v0.1.28_Darwin_arm64.tar.gz"
+      sha256 "f12ac81f970e15135374c2e844c832b4d3d9027880ee81acd33ee6ff9aca86d9"
     else
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.27/claudectl_v0.1.27_Darwin_x86_64.tar.gz"
-      sha256 "bf1e497a46eed1b154bb5d6cd2f6483e55b2813a0636f028e1c566d6d4fdaf4f"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.28/claudectl_v0.1.28_Darwin_x86_64.tar.gz"
+      sha256 "e6bafffe170625f0ba03394b02770a27312c7af1b19da3136fd44915bbf8e092"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.27/claudectl_v0.1.27_Linux_x86_64.tar.gz"
-      sha256 "e9ef7b1852d4e313bebe8c6ad77bab1ccab6c2f8253b650a2b4c323123f362f6"
+      url "https://github.com/Sawmills/claudectl/releases/download/v0.1.28/claudectl_v0.1.28_Linux_x86_64.tar.gz"
+      sha256 "29eb0d2baef13b0dba30ff498e92d8dd85664490905cc64e04ce84c5f6828d98"
     end
   end
 
