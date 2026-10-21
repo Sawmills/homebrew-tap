@@ -34,7 +34,8 @@ jobs:
     name: alert-on-failure
     needs: smoke
     if: ${{ always() && needs.smoke.result == 'failure' }}
-    runs-on: ubuntu-latest
+    # trunk-ignore(actionlint/runner-label): Existing Namespace profile
+    runs-on: namespace-profile-sawmills-runner
     permissions:
       contents: read
       issues: write
