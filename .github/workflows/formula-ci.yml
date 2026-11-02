@@ -27,6 +27,10 @@ jobs:
 
           brew update-reset
           brew tap Sawmills/tap "file://${PWD}"
+          # Newer Homebrew refuses to load formulae from a tap until it is trusted.
+          if brew trust --help >/dev/null 2>&1; then
+            brew trust sawmills/tap
+          fi
 
           for formula in "${formulae[@]}"; do
             name="$(basename "${formula}" .rb)"

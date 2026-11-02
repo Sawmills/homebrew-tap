@@ -21,6 +21,10 @@ jobs:
           brew update
           brew untap sawmills/tap >/dev/null 2>&1 || true
           brew tap sawmills/tap https://github.com/Sawmills/homebrew-tap
+          # Newer Homebrew refuses to load formulae from a tap until it is trusted.
+          if brew trust --help >/dev/null 2>&1; then
+            brew trust sawmills/tap
+          fi
 
           brew uninstall --force sm >/dev/null 2>&1 || true
           brew install sawmills/tap/sm
